@@ -1,0 +1,215 @@
+<!--"C:\Program Files\Google\Chrome\Application\chrome.exe" "$(FULL_CURRENT_PATH)"-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JVJBC</title>
+	<meta charset = "utf-8"/>
+	<link rel = "stylesheet" type = "text/css" href = "CommunityProject.css">
+	<script src="https://first-project-2918c.web.app/"></script>
+	<script>
+var answers = ["A", "C", "B"],
+    tot = answers.length;
+function getCheckedValue(radioName) {
+    var radios = document.getElementsByName(radioName);
+    for (var y = 0; y < radios.length; y++)
+        if (radios[y].checked) return radios[y].value;
+}
+function getScore() {
+    var score = 0;
+    for (var i = 0; i < tot; i++)
+        if (getCheckedValue("question" + i) === answers[i]) score += 1;
+    return score;
+}
+function returnScore() {
+    document.getElementById("myresults").innerHTML =
+        "Your score is " + getScore() + "/" + tot + " try again next time to get a chance to win a $5 gift card of your choice!";
+    if (getScore() > 2) {
+        document.getElementById("myresults").innerHTML =
+        "Congrats! You got all the questions right! Here's the link to get a chance win a $5 gift card of your choice: " + "https://forms.gle/BvBpumdkzGwDq3a9A";
+    }
+}
+
+	</script>
+</head>
+<body>
+	<div id="header">
+	<h1> Welcome to JVJBC</h1>
+	</div>
+
+	<div id="content">
+		<div class="topnav">
+  <a class="active" href="CommunityProject.html" >Main Page</a>
+		<a class = "linkbutton" href="housing.html">Housing</a>
+		<a class = "linkbutton" href="economy.html">Economy</a>
+		<a class = "linkbutton" href="settings.html">Settings</a>
+		<a class = "linkbutton" href="https://www.unitedwaygt.org/">Fundraiser</a>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+
+<ul id="myUL">
+  <li><a href="housing.html">Housing</a></li>
+  <li><a href="economy.html">Economy</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="https://www.unitedwaygt.org/">Fundraiser</a></li>
+</ul>
+
+<script>
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+	</div>
+	</div>
+	<h2></h2>
+ <div id="content">
+ 	<div id="video">
+	<video width="1000" controls>
+	<source src="Homesnow.mp4" type="video/mp4">
+	</video>
+	 	<video width="1000" controls>
+	<source src="1.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="2.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="3.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="4.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="5.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="6.mp4" type="video/mp4">
+	</video>
+	</div>
+        <ul class="quiz">
+    <li>
+        <h4>What is the housing crisis in Canada?</h4>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="A" /><span
+                        >The housing crisis is the increase in house prices</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="B" /><span
+                        >The housing crisis is the issue of nobody wanting to live in houses</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="C" /><span
+                        >The housing crisis is people's salary decreasing</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="D" /><span
+                        >The housing crisis is the issue of houses being destroyed</span
+                    ></label
+                >
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h4>Why is it happening?</h4>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question1" value="A" /><span
+                        >It's caused due to natural disasters destroying countless houses</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question1" value="B" /><span
+                        >It's caused due to people wanting to live on the streets so that they don't have to pay for housing</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question1" value="C" /><span
+                        >It's caused due to inflation and the lack of available houses from too many people, causing people to be unable to afford houses</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question1" value="D" /><span
+                        >It's caused due to jobs not paying people enough</span
+                    ></label
+                >
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h4>What can you do to help?</h4>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question2" value="A" /><span
+                        >You can move to a different country</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question2" value="B" /><span
+                        >You can spread awareness, donate to charities for the homeless, and try to contact the government by protesting.</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question2" value="C" /><span
+                        >You can try to get a better paying job</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question2" value="D" /><span
+                        >You don't do anything and just wait for it to stop</span
+                    ></label
+                >
+            </li>
+        </ul>
+    </li>
+</ul>
+<button class="view-results" onclick="returnScore()">View Results</button>
+<span id="myresults" class="my-results">Results will appear here</span>
+ <div id="footer">
+	<h3> About us</h3>
+	<h4> We are a nonprofit organization that raises awareness for the housing and economy of Canada. This website was founded by Justin, Jujhar and Vunsh</h4>
+	<a class = "linkbutton" href="https://x.com/home">Twitter/X - @JVJBC129594</a>
+	<a class = "linkbutton" href="https://mail.google.com/mail/u/6/#inbox">Gmail - jvjbc1@gmail.com</a>
+ </div>
+</body>
+</html>
