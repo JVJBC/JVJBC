@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Log In</title>
+ <meta charset="utf-8" />
+	<link rel = "stylesheet" type = "text/css" href = "CommunityProject.css">
+	<script src="https://first-project-2918c.web.app/"></script>
+ <script>
+    // validate form
+    function validateForm() {
+    //alert("validate form");
+    
+    // validate name
+    var input = document.forms["myForm"]["name"].value.trim();
+    if (input === "") {
+    alert("Name must be filled out");
+    return false;
+    }
+    // validate city
+    var input = document.forms["myForm"]["city"].value.trim();
+    if (input === "") {
+    alert("City must be filled out");
+    return false;
+    }
+    // validate email
+    var input = document.forms["myForm"]["email"].value.trim();
+    if (input === "") {
+    alert("Email must be filled out");
+    return false;
+    }
+    return true;
+   } // end validateForm
+    </script>
+</head>
+<body>
+ <div id="header">
+ <h1>Log into account to recieve personalized news</h1>
+ </div>
+
+ <div class="nav" >
+    <a class="linkbutton" href="CommunityProject.html" >Back</a>
+</div>
+
+ <div id="content">
+ <h2>Log in</h2>
+ <form action="https://script.google.com/macros/s/AKfycbwn2_CgyuqIkKoJHJwC5HLO_xogFYFp6g2UeiBr6m91wXEEoeePBMmHp6dLwmksZl_MCA/exec" method="POST">
+    <label for="name">First and last name:</label>
+    <input type="text" id="name"><br>
+    <label for="city">City:</label>
+    <input type="text" id="city"><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email"><br>
+    <label for="password">Password:</label>
+    <input type="text" id="password"><br>
+    <button type="login">Log In</button>
+  </form>
+</body>
+</form
+ </div>
+
+ <div id="footer">
+	<h3> About us</h3>
+	<h4> We are a nonprofit organization that raises awareness for the housing and economy of Canada. This website was founded by Justin, Jujhar and Vunsh</h4>
+	<a class = "linkbutton" href="https://x.com/home">Twitter/X - @JVJBC129594</a>
+	<a class = "linkbutton" href="https://mail.google.com/mail/u/6/#inbox">Gmail - jvjbc1@gmail.com</a>
+ </div>
+ 	<script>
+	
+   var config = {
+
+    apiKey: "AIzaSyCyEsLO0-eE8el_5PVGtbpYCtsIWlqR6AU",
+
+    authDomain: "first-project-2918c.firebaseapp.com",
+
+    projectId: "first-project-2918c",
+	
+	databaseURL: "https://first-project-2918c.web.app/",
+
+    storageBucket: "first-project-2918c.appspot.com",
+
+    messagingSenderId: "625371466799",
+
+    appId: "1:625371466799:web:540982ebef5a22d96b0ada",
+
+    measurementId: "G-P81F7BN3R8"
+
+  };
+
+
+   // Initialize your Firebase app
+   firebase.initializeApp(config);
+   // reference to data base
+   database = firebase.database().ref();
+</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JVJBC</title>
+ <meta charset="utf-8" />
+	<link rel = "stylesheet" type = "text/css" href = "CommunityProject.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+	<div id="header">
+	<h2>Housing Crisis Info</h2>
+	</div>
+
+ <div id="content">
+ 		<div class="topnav">
+  <a class = "linkbutton" href="CommunityProject.html" >Main Page</a>
+		<a class = "active" href="housing.html">Housing</a>
+		<a class = "linkbutton" href="economy.html">Economy</a>
+		<a class = "linkbutton" href="settings.html">Settings</a>
+		<a class = "linkbutton" href="https://www.unitedwaygt.org/">Fundraiser</a>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+
+<ul id="myUL">
+  <li><a href="CommunityProject.html">Main Page</a></li>
+  <li><a href="economy.html">Economy</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="https://www.unitedwaygt.org/">Fundraiser</a></li>
+</ul>
+
+<script>
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+	</div>
+
+<button class="accordion">What is the housing issue?</button>
+<div class="panel">
+  <p>The housing issue in Canada is due to a lack of houses, thus making rent and house prices skyrocket. This is causing tons of people in Canada to move areas woth cheaper housing and are discouraging immigrants from coming to Canada because they can’t afford a house to live in. Houses increased by 46% during Covid-19.</p>
+</div>
+
+<button class="accordion">Why does the housing issue happen?</button>
+<div class="panel">
+  <p>The housing issue happened because of the massive inflation from the imbalance between the lack of houses and the high demand for houses. Furthermore, due to the construction of new houses slowing down, bad use of space for constructing houses, and houses that people don't use anymore, wasting even more space</p>
+</div>
+
+<button class="accordion">What this housing crisis forces people to do:</button>
+<div class="panel">
+  <p>The only thing people can do if they don’t have a house is to either take out a mortgage so they could live somewhere while they work to pay it off, rent a house for a lot of money, or stay somewhere else cheaper and wait until they can eventually afford it, which might take decades or even longer. The salaries from jobs aren’t helping either as salaries aren't increasing much the same while houses are skyrocketing.</p>
+</div>
+
+<button class="accordion">What we can do to help:</button>
+<div class="panel">
+  <p>To help, you can spread awareness about this issue to the government through a variety of means, such as protests or contacting them, which can help by motivating the construction of houses and lowering people’s tax on houses. The government could also pay banks to lessen the interest rates in loans when people are building houses as it’ll convince more people to build new houses.</p>
+</div>
+
+<button class="accordion">Is the housing issue going to get better soon?</button>
+<div class="panel">
+  <p>Currently, it looks like the housing crisis isn’t going to end for the next few years naturally unless something drastic is done such as more houses being built or less people in a short period of time. This'll be be incredibly difficult because around 3.5 million houses need to be built buy 2030 for housing prices to go back down, costing trillions of dollars, which costs more than Canada’s entire GDP, meaning the government probably won’t pay for it. The easier way to resolve this is by either using the housing we already have more efficiently by having multiple families living in each house or reducing the people by regulating people from immigrating to Canada and paying people to move to a different country for 250,000$ instead of making a new house, costing 1,000,000$.</p>
+</div>
+
+	<button class="accordion">Which provinces are the most expensive to buy a one bedroom apartment?</button>
+<div class="panel">
+  <p>British Columbia: 
+Vancouver: Average price for a detached home: CAD 1.5-2.5 million 
+Victoria: Average price for a detached home: CAD 900,000-1.5 million 
+Ontario: 
+Toronto: Average price for a detached home: CAD 1-2 million 
+Ottawa: Average price for a detached home: CAD 600,000-800,000 
+Hamilton: Average price for a detached home: CAD 600,000-800,000 
+Alberta: 
+Calgary: Average price for a detached home: CAD 500,000-700,000 
+Edmonton: Average price for a detached home: CAD 400,000-600,000 
+Quebec: 
+Montreal: Average price for a detached home: CAD 400,000-600,000 
+Quebec City: Average price for a detached home: CAD 300,000-500,000 
+Saskatchewan: 
+Saskatoon: Average price for a detached home: CAD 300,000-500,000 
+Regina: Average price for a detached home: CAD 300,000-500,000 
+Manitoba: 
+Winnipeg: Average price for a detached home: CAD 300,000-500,000 
+Nova Scotia: 
+Halifax: Average price for a detached home: CAD 300,000-500,000 
+New Brunswick: 
+Fredericton: Average price for a detached home: CAD 250,000-400,000 
+Saint John: Average price for a detached home: CAD 200,000-350,000 
+Prince Edward Island: 
+Charlottetown: Average price for a detached home: CAD 250,000-400,000 
+Newfoundland and Labrador: 
+St. John's: Average price for a detached home: CAD 250,000-400,000 
+</p>
+</div>
+
+	<button class="accordion">Which provinces are the most expensive to rent an average detached house?</button>
+<div class="panel">
+  <p>British Columbia: 
+Vancouver: Average rent for a one-bedroom apartment: CAD 2,000-2,500 
+Victoria: Average rent for a one-bedroom apartment: CAD 1,400-1,800 
+Ontario: 
+Toronto: Average rent for a one-bedroom apartment: CAD 2,000-2,500 
+Ottawa: Average rent for a one-bedroom apartment: CAD 1,400-1,800 
+Hamilton: Average rent for a one-bedroom apartment: CAD 1,200-1,600 
+Alberta: 
+Calgary: Average rent for a one-bedroom apartment: CAD 1,200-1,500 
+Edmonton: Average rent for a one-bedroom apartment: CAD 1,000-1,300 
+Quebec: 
+Montreal: Average rent for a one-bedroom apartment: CAD 1,200-1,500 
+Quebec City: Average rent for a one-bedroom apartment: CAD 900-1,200 
+Saskatchewan: 
+Saskatoon: Average rent for a one-bedroom apartment: CAD 900-1,200 
+Regina: Average rent for a one-bedroom apartment: CAD 900-1,200 
+Manitoba: 
+Winnipeg: Average rent for a one-bedroom apartment: CAD 900-1,200 
+Nova Scotia: 
+Halifax: Average rent for a one-bedroom apartment: CAD 1,100-1,400 
+New Brunswick: 
+Fredericton: Average rent for a one-bedroom apartment: CAD 800-1,100 
+Saint John: Average rent for a one-bedroom apartment: CAD 800-1,100 
+Prince Edward Island: 
+Charlottetown: Average rent for a one-bedroom apartment: CAD 800-1,100 
+Newfoundland and Labrador: 
+St. John's: Average rent for a one-bedroom apartment: CAD 800-1,100 
+</p>
+</div>
+
+	<button class="accordion">How much have house prices increased in the past decade?</button>
+<div class="panel">
+  <p>British Columbia:
+Greater Vancouver Area: Some housing prices in Vancouver have increased 100% or more. 
+Greater Victoria Area: Some housing prices in Victoria have increased 50% or more. 
+Ontario: 
+Greater Toronto Area (GTA): Some housing prices in Toronto have rapidly increased 100% or more. 
+Hamilton: Some housing prices in Hamilton have increased 70% or more. 
+Quebec: 
+Greater Montreal Area: Some housing prices in Montreal have steadily increased 40-50% or more. 
+Quebec City: Some housing prices in Quebec City have increased 20-30%. 
+Alberta: 
+Calgary: Some housing prices in Calgary have increased 10-20%. 
+Edmonton: Some housing prices in Edmonton have increased 10-20%. 
+Atlantic Canada: 
+Halifax, Nova Scotia: Some housing prices in Halifax have increased 20-30% or more. 
+St. John's, Newfoundland and Labrador: Some housing prices in St. John's have stably increased 10-20%.
+</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+  <a href="https://www.realtor.ca/">Trusted Website for housing prices</a>
+  <a href="https://www.chrisglovermpp.ca/petitions">Trusted Petition #1</a>
+  <a href="https://www.change.org/p/toronto-housing-affordability-crisis">Trusted Petition #2</a>
+  <h1></h1>
+  <h1>Find Location On Google Maps</h1>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 	<video width="1000" controls>
+	<source src="1.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="2.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="3.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="4.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="5.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="6.mp4" type="video/mp4">
+	</video>
+ </div>
+ <div id="content">
+ <div id="footer">
+	<h3> About us</h3>
+	<h4> We are a nonprofit organization that raises awareness for the housing and economy of Canada. This website was founded by Justin, Jujhar and Vunsh</h4>
+	<a class = "linkbutton" href="https://x.com/home">Twitter/X - @JVJBC129594</a>
+	<a class = "linkbutton" href="https://mail.google.com/mail/u/6/#inbox">Gmail - jvjbc1@gmail.com</a>
+ </div>
+</body>
+</html>

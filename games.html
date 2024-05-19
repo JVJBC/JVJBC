@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JVJBC</title>
+ <meta charset="utf-8" />
+	<link rel = "stylesheet" type = "text/css" href = "CommunityProject.css">
+</head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+<body>
+ <div id="header">
+ <h1>Games</h1>
+ </div>
+ <div id="content">
+ 		<div class="topnav">
+  <a class = "linkbutton" href="CommunityProject.html" >Main Page</a>
+		<a class = "linkbutton" href="housing.html">Housing</a>
+		<a class = "linkbutton" href="economy.html">Economy</a>
+		<a class = "active" href="games.html">Games</a>
+		<a class = "linkbutton" href="settings.html">Settings</a>
+		<a class = "linkbutton" href="https://www.unitedwaygt.org/">Fundraiser</a>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+
+<ul id="myUL">
+  <li><a href="housing.html">Housing</a></li>
+  <li><a href="economy.html">Economy</a></li>
+  <li><a href="games.html">Games</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="https://www.unitedwaygt.org/">Fundraiser</a></li>
+</ul>
+
+<script>
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+	</div>
+ <h2>You can play as many games as you want here for free!</h2>
+ <a href="https://scratch.mit.edu/projects/948472944">Game #1</a>
+ <a href="https://scratch.mit.edu/projects/980092914">Game #2</a>
+ </div>
+ <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+
+<script>
+var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+
+<h1>Getting server updates</h1>
+<div id="result"></div>
+
+<script>
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("demo_sse.php");
+  source.onmessage = function(event) {
+    document.getElementById("result").innerHTML += event.data + "<br>";
+  };
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+
+ <div id="content">
+ <div id="footer">
+	<h3> About us</h3>
+	<h4> We are a nonprofit organization that raises awareness for the housing and economy of Canada. This website was founded by Justin, Jujhar and Vunsh</h4>
+	<a class = "linkbutton" href="https://x.com/home">Twitter/X - @JVJBC129594</a>
+	<a class = "linkbutton" href="https://mail.google.com/mail/u/6/#inbox">Gmail - jvjbc1@gmail.com</a>
+ </div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JVJBC</title>
+	<link rel = "stylesheet" type = "text/css" href = "CommunityProject.css">
+</head>
+<body>
+ <div id="header">
+ <h1>Economy</h1>
+ </div>
+ <div id="content">
+ 		<div class="topnav">
+  <a class = "linkbutton" href="CommunityProject.html" >Main Page</a>
+		<a class = "linkbutton" href="housing.html">Housing</a>
+		<a class = "active" href="economy.html">Economy</a>
+		<a class = "linkbutton" href="settings.html">Settings</a>
+		<a class = "linkbutton" href="https://www.unitedwaygt.org/">Fundraiser</a>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+
+<ul id="myUL">
+  <li><a href="housing.html">Housing</a></li>
+  <li><a href="CommunityProject.html">Main Page</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="https://www.unitedwaygt.org/">Fundraiser</a></li>
+</ul>
+
+<script>
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+	</div>
+  <div id="CurrencyConverter">
+<!-- Currency Converter -->
+    <h1 class="heading text-center display-2">
+        Currency Converter
+    </h1>
+    <hr>
+    <div class="container">
+        <div class="main">
+            <div class="form-group">
+                <label for="oamount">
+                    Amount to Convert :
+                </label>
+                <input type="text" class="form-control searchBox" placeholder="0.00" id="oamount">
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">From</span>
+                        </div>
+                        <select class="form-control from" id="sel1">
+                            <option value="">Select One …</option>
+                            <option value="USD">USD</option>
+                            <option value="AED">AED</option>
+                            <option value="ARS">ARS</option>
+                            <option value="AUD">AUD</option>
+                            <option value="BGN">BGN</option>
+                            <option value="BRL">BRL</option>
+                            <option value="BSD">BSD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CLP">CLP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="COP">COP</option>
+                            <option value="CZK">CZK</option>
+                            <option value="DKK">DKK</option>
+                            <option value="DOP">DOP</option>
+                            <option value="EGP">EGP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="FJD">FJD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="GTQ">GTQ</option>
+                            <option value="HKD">HKD</option>
+                            <option value="HRK">HRK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="IDR">IDR</option>
+                            <option value="ILS">ILS</option>
+                            <option value="INR">INR</option>
+                            <option value="ISK">ISK</option>
+                            <option value="JPY">JPY</option>
+                            <option value="KRW">KRW</option>
+                            <option value="KZT">KZT</option>
+                            <option value="MVR">MVR</option>
+                            <option value="MXN">MXN</option>
+                            <option value="MYR">MYR</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="PAB">PAB</option>
+                            <option value="PEN">PEN</option>
+                            <option value="PHP">PHP</option>
+                            <option value="PKR">PKR</option>
+                            <option value="PLN">PLN</option>
+                            <option value="PYG">PYG</option>
+                            <option value="RON">RON</option>
+                            <option value="RUB">RUB</option>
+                            <option value="SAR">SAR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="TRY">TRY</option>
+                            <option value="TWD">TWD</option>
+                            <option value="UAH">UAH</option>
+                            <option value="UYU">UYU</option>
+                            <option value="ZAR">ZAR</option>
+                        </select>
+                    </div>
+                </div>
+ 
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">To</span>
+                        </div>
+                        <select class="form-control to" id="sel2">
+                            <option value="">Select One …</option>
+                            <option value="USD">USD</option>
+                            <option value="AED">AED</option>
+                            <option value="ARS">ARS</option>
+                            <option value="AUD">AUD</option>
+                            <option value="BGN">BGN</option>
+                            <option value="BRL">BRL</option>
+                            <option value="BSD">BSD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CLP">CLP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="COP">COP</option>
+                            <option value="CZK">CZK</option>
+                            <option value="DKK">DKK</option>
+                            <option value="DOP">DOP</option>
+                            <option value="EGP">EGP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="FJD">FJD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="GTQ">GTQ</option>
+                            <option value="HKD">HKD</option>
+                            <option value="HRK">HRK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="IDR">IDR</option>
+                            <option value="ILS">ILS</option>
+                            <option value="INR">INR</option>
+                            <option value="ISK">ISK</option>
+                            <option value="JPY">JPY</option>
+                            <option value="KRW">KRW</option>
+                            <option value="KZT">KZT</option>
+                            <option value="MVR">MVR</option>
+                            <option value="MXN">MXN</option>
+                            <option value="MYR">MYR</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="PAB">PAB</option>
+                            <option value="PEN">PEN</option>
+                            <option value="PHP">PHP</option>
+                            <option value="PKR">PKR</option>
+                            <option value="PLN">PLN</option>
+                            <option value="PYG">PYG</option>
+                            <option value="RON">RON</option>
+                            <option value="RUB">RUB</option>
+                            <option value="SAR">SAR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="TRY">TRY</option>
+                            <option value="TWD">TWD</option>
+                            <option value="UAH">UAH</option>
+                            <option value="UYU">UYU</option>
+                            <option value="ZAR">ZAR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="text-center">
+ 
+                <!-- convert button -->
+                <button class="btn btn-primary convert m-2" type="submit">
+                    Convert
+                </button>
+                <!-- reset button -->
+                <button class="btn btn-primary m-2" onclick="clearVal()">
+                    Reset
+                </button>
+            </div>
+ 
+        </div>
+ 
+        <div id="finalAmount" class="text-center">
+ 
+            <!-- Display the converted amount -->
+            <h2>Converted Amount :
+                <span class="finalValue" style="color:green;">
+                </span>
+            </h2>
+        </div>
+    </div>
+ </div>
+  <h2>Rent Statistics</h2>
+ <img src="average-asking-rent-july-2023.avif" alt="Rent Statistics">
+ <h2>Housing Timeline</h2>
+<img src="Oxford-Economics-Canadian-Real-Estate-Bubble-Correction.webp" alt="Housing Prices Statistics">
+ <h2>Housing Prices Statistics</h2>
+<img src="Fifty-years-in-the-making-of-Ontarios-housing-crisis-main-1024x576.png" alt="Housing Timeline">
+ 	<video width="1000" controls>
+	<source src="1.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="2.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="3.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="4.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="5.mp4" type="video/mp4">
+	</video>
+	<video width="1000" controls>
+	<source src="6.mp4" type="video/mp4">
+	</video>
+ <div id="footer">
+	<h3> About us</h3>
+	<h4> We are a nonprofit organization that raises awareness for the housing and economy of Canada. This website was founded by Justin, Jujhar and Vunsh</h4>
+	<a class = "linkbutton" href="https://x.com/home">Twitter/X - @JVJBC129594</a>
+	<a class = "linkbutton" href="https://mail.google.com/mail/u/6/#inbox">Gmail - jvjbc1@gmail.com</a>
+ </div>
+</body>
+<!-- linking script.js file -->
+    <script src="script.js"></script>
+</html>
